@@ -1,0 +1,79 @@
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left rounded shadow bg-light py-4">
+            <form [formGroup]="myReactiveForm" (ngSubmit)="myForm()">
+                <div class="mb-3">
+                  <label for="username" class="form-label">UserName</label>
+                  <input type="text" class="form-control" id="username"  formControlName="username" required>
+                  <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                  <div class="text-danger" *ngIf="myReactiveForm.controls.username.touched">
+                    <span *ngIf="myReactiveForm.controls.username.errors?.required">username is required</span>
+                    <span *ngIf="myReactiveForm.controls.username.errors?.minlength">Min 5 character required</span>
+                </div>
+                </div>
+                <!-- </div> -->
+                
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" formControlName="email" required>
+                  <!-- <div *ngIf="myReactiveForm.controls.username.touched" class="invalid-feedback"> -->
+                    <div class="text-danger" *ngIf="myReactiveForm.controls.email.touched">
+                        <span *ngIf="myReactiveForm.controls.email.errors?.required">Email is required</span>
+                        <span *ngIf="myReactiveForm.controls.email.errors?.minlength">Min 5 character required</span>
+                    </div>
+                    <!-- <div class="text-danger" *ngIf=" isSubmitted && g.email.errors?.required">email is required</div> -->
+                </div>
+                    <!-- </div> -->
+
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class=" mb-3">
+                          <label for="text" class="form-label">State</label>
+                          <select  class=" form-control form-select" name="state" formControlName="statelist" (change)="getCities($event.target)">
+                            <option  *ngFor="let state of allState" value="{{state}}">{{state}}</option>
+                            <!-- <option value="1">One</option> -->
+                           
+                          </select>
+                          <!-- <label for="floatingSelect">Works with selects</label> -->
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class=" mb-3">
+                          <label for="text" class="form-label">City</label>
+                          <select class="form-control form-select" name="state" formControlName="citylist" [ngClass]="(myReactiveForm.controls.statelist.value=='')?'disabled':''" >
+                            <option *ngFor="let cities of allCities" value="{{cities}}">{{cities}}</option>
+                            <!-- <option value="1">One</option> -->
+                           
+                          </select>
+                          <!-- <label for="floatingSelect">Works with selects</label> -->
+                        </div>
+                      </div>
+                    </div>
+                    
+                      
+                <button type="submit"  class="btn btn-primary">Submit</button>
+              </form>
+              <table class="table table-bordered table-hover pt-4">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>State</th>
+                        <th>City</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of Users;index as i">
+                        <td>{{i+1}}</td>
+                        <td>{{user.username}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.statelist}}</td>
+                        <td>{{user.citylist}}</td>
+                    </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+.box
+{
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 300px;
+    padding: 15px;
+    font-size: 18px;
+}
+input{
+    background: #fff;
+    border: 1px solid #ddd;
+    width: 80%;
+    font-size: 18px;
+    display: block;
+    padding: 10px 12px;
+    text-align: center;
+}
+button
+{
+    background: green;
+    font-size: 20px;
+    /* color: #fff; */
+    padding: 6px 15px;
+    /* margin: 5px auto; */
+    border: 0;
+    /* display: inline-block; */
+    /* width: auto; */
+    border-radius: 5px;
+}
+.boxRed
+{
+    background-color: #fff7f3;
+}
+.boxGreen
+{
+    background-color: #f4fbf6;
+}

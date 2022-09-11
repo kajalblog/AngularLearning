@@ -1,0 +1,5 @@
+input .ng-touched
+{
+    border: 1px solod red;
+    /* box-shadow: inset red; */
+}

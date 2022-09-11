@@ -1,0 +1,34 @@
+<div class="container ">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left bg-light rounded shadow py-4">
+
+            <form [formGroup]="signUp" (ngSubmit)="regUser()" >
+                <div class="mb-3 text-center">
+                    <h1 class="text-success">Register</h1>
+                </div>
+                <div class="mb-3">
+                    <label for="username" class="form-label">User Name</label>
+                    <input type="text" class="form-control" id="username1"   f required>
+                    <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                  </div>
+                <div class="mb-3">
+                  <label  class="form-label">Email address</label>
+                  <input type="email" class="form-control"    >
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label  class="form-label">Password</label>
+                  <input type="password" class="form-control"  >
+                </div>
+                <div class="mb-3">
+                    <label for="mobilenumber" class="form-label">Mobile Number</label>
+                    <input type="text" class="form-control" id="mobile" aria-describedby="emailHelp" >
+                    <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                  </div>
+                <button type="submit" class="btn btn-success" >Register</button>
+              </form>
+              <a routerLink="/login">Already have Account</a>
+        </div>
+    </div>
+</div>
+

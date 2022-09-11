@@ -1,0 +1,40 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "name": "Kajal Parchande",
+      "email": "kajal@gmail.com",
+      "mobile": 9586512358,
+      "joiningdate": "2022-09-07",
+      "salary": 55000
+    },
+    {
+      "id": 3,
+      "name": "Amol Jadhav",
+      "email": "Amol@gmail.com",
+      "mobile": 8856257862,
+      "joiningdate": "2022-09-07",
+      "salary": 45000
+    },
+    {
+      "id": 4,
+      "name": "Priyanka Bansode",
+      "email": "priyanka@gmail.com",
+      "mobile": 8856247652,
+      "joiningdate": "2022-09-07",
+      "salary": 75000
+    }
+  ],
+  "registerUser": [
+    {
+      "username": {},
+      "email": {},
+      "password": {},
+      "mobile": {},
+      "id": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

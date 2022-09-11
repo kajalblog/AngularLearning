@@ -1,0 +1,56 @@
+<!-- <div class="container text-center bg-light"> -->
+    <div class="row">
+        <div class="col parent-box">
+            <h1>Users</h1>
+            <table width="100%">
+                <tr>
+                    <th>User Name</th>
+                    <th>Action</th>
+                </tr>
+                <tr *ngFor="let user of users; index as i">
+                    <td>{{user}}</td>
+                    <td class="removeLink" (click)="removeUser(i)">Remove</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col parent-box">
+            <h1>Users</h1>
+            <table width="100%">
+                <tr>
+                    <th>User Name</th>
+                    <th>Action</th>
+                </tr>
+                <tr *ngFor="let admin of Admindata; index of i">
+                    <td>{{admin}} </td>
+                    <td class="removeLink">Remove</td>
+                </tr>
+            </table>
+        </div>
+        <!-- <div class="col parent-box">
+            <h1>Admin</h1>
+        </div> -->
+    
+    
+<!-- </div> -->
+<!-- <div class="container">
+    <h2 class="text-success">Clild</h2>
+    <h1>Kajal</h1>
+    <app-child1 [placeholder]="placeholder"></app-child1>
+</div> -->
+<div>child</div>
+<hr>
+<div class="container text-center">
+    <div class="row childclass  ">
+        <div class="col-md-6">
+            <app-child1 [boxColor]="'red'" [placeholder]="'Create User'" (inputEvent)="AddUser($event)"></app-child1>
+        <!-- <app-child1></app-child1> -->
+        </div>
+        <div class="col-md-6">
+            <app-child1 [boxColor]="'Green'" [placeholder]="'Create Admin '" (inputEvent)="addAdmin($event)"></app-child1>
+        <!-- <app-child1></app-child1> -->
+        </div>
+        
+    </div>
+</div>
+
+

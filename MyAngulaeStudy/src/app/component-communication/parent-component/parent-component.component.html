@@ -1,0 +1,50 @@
+
+<div class="container">
+    <div class="alert alert-light border" *ngIf="onAddedToCart">
+        <h2 class="text-success">{{onAddedToCart}}<span>is added in cart</span></h2>
+    </div>
+    <div class="row ">
+        <div class="col-md-6">
+            <div class="card mb-4">
+            <div class="card-body">
+            <h5 class="card-title">Mobile</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a  class="btn btn-primary" (click)="selectProduct('Mobile')"> Mobile</a>
+           
+        
+        </div>
+        </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Laptop</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a  class="btn btn-primary" (click)="selectProduct('Laptop')"> Laptop</a>
+                    </div>
+            </div>
+            
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                <h5 class="card-title">TV</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a  class="btn btn-primary" (click)="selectProduct('TV')">TV</a>
+            </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                <h5 class="card-title">Car</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a  class="btn btn-primary" (click)="selectProduct('Car')">Car</a>
+            </div>
+            </div>
+        </div>
+        
+    </div>
+    <app-child-component [placeholderText]="'Serach Product'" [ProductSelected]="ProductSelected" [selectedProduct]="selectedProduct" (onAddedToCart)="onAdded($event)"></app-child-component>
+    
+</div>

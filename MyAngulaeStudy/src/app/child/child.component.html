@@ -1,0 +1,11 @@
+
+<div class="container shadow bg-primary " >
+    <div class="row">
+        <div class="col-md-12 py-4 mt-4  text-white text-center">
+            <h1 *ngIf="!productselected">Please Select Any Product</h1>
+            <h2 *ngIf="productselected">{{selectedProduct}} is selected</h2>
+            <button class="btn btn-light " (click)="onaddProducr()">Add to cart</button>
+        </div>
+      </div>
+</div>
+ <!-- <input type="text" placeholder="{{placeholderText}}" value=""> -->

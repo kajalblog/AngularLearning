@@ -1,0 +1,64 @@
+<div class="container shadow">
+<p>about works!</p>
+<h4>{{value}}</h4>
+<h4>{{value |uppercase}}</h4>
+<h4>{{value |lowercase}}</h4>
+<h4>{{value | titlecase}}</h4>
+<h5>{{val1}}</h5>
+<h5>{{val1 |titlecase}}</h5>
+<h4>{{value |slice:2}}</h4>
+<h4>{{value |slice:2:5}}</h4>
+<h2>{{date}}</h2>
+<h2>{{date|date}}</h2>
+<h2>{{date|date:'short'}}</h2>
+<h2>{{date|date:'medium'}}</h2>
+<h2>{{date|date:'long'}}</h2>
+<h2>{{date|date:'full'}}</h2>
+<h2>{{date|date:'shortDate'}}</h2>
+<h2>{{date|date:'mediumDate'}}</h2>
+<h2>{{date|date:'longDate'}}</h2>
+
+Multiple pipes -order matters
+<h2>{{date|date|uppercase}}</h2>
+<h2>{{date|date:'full'|uppercase}}</h2>
+<hr>
+<h1>Custom Pipes</h1>
+<h3>{{customval |cpipe}}</h3>
+
+<input type="text " class="b" value="This is 3 dot concept using ellipss">
+<input type="text" value="{{value|cpipe}}">
+<ul>
+    <li *ngFor="let name of newArray ">
+        {{name |cpipe }}
+    </li>
+</ul>
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Search</span>
+            <input type="text" class="form-control" [(ngModel)]="searchInput"
+             placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+    </div>
+    <div class="col-md-8">
+        <table class="table table-light">
+            <thead class=" ">
+              <th>srNo</th>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Avalibility</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of ProductArr | filter:searchInput">
+                    <td>{{product.srno}}</td>
+                    <td>{{product.name}}</td>
+                    <td>{{product.price}}</td>
+                    <td>{{product.avalibility}}</td>
+                </tr>
+              
+            </tbody>
+          </table>
+    </div>
+</div>
+</div>

@@ -1,0 +1,122 @@
+<div class="container text-center text-white" [ngClass]="Myclass">
+    <h1>Home</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias pariatur consequatur excepturi facere. Sapiente, facilis nesciunt. Ipsam voluptatem labore quo nemo ut, minima debitis, distinctio pariatur sequi, et optio modi laudantium illo recusandae. Voluptatem maxime quisquam hic molestias. Obcaecati possimus ducimus ullam ad incidunt architecto dignissimos consectetur inventore illum voluptatem?</p>
+    <ng-container *ngIf="isActive">
+<div *ngFor="let item of products">
+        {{item.name}}
+    </div>
+    </ng-container>
+    </div>
+    <div class="container shadow-sm py-3 bg-primary">
+<div class="row">
+    <div class="col-md-4">
+        <button class="btn btn-success " (click)="show()">Show</button>
+        
+    </div>
+    <div class="col-md-4">
+        <div class="text-danger" *ngIf="isShow">This is ngIf directive</div>
+    </div>
+    <div class="col-md-4">
+        <button class="btn btn-danger " (click)="hide()">Hide</button>
+    </div>
+    
+</div>
+<div class="row py-3">
+    <div class="col-md-4">
+        <button class="btn btn-success " (click)="isShow=true">Show</button>
+        
+    </div>
+    <div class="col-md-4">
+        <div class="text-danger" *ngIf="isShow">This is ngIf directive</div>
+    </div>
+    <div class="col-md-4">
+        <button class="btn btn-danger " (click)="isShow=false">Hide</button>
+    </div>
+    
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <button class="btn btn-success" (click)="isShow=!isShow">toggle</button>
+    </div>
+    <div class="col-md-6">
+        <div *ngIf="getVisible()">This is block using method of ngIf Directive</div>
+    </div>
+</div>
+        
+<div class="row">
+    <div class="col-md-4">
+        <input type="text" class="form-control" [(ngModel)]="city1">
+    </div>
+    <div class="col-md-4">
+        <button type="submit" class="btn btn-info" (click)="addCity()">Add city</button>
+    </div>
+</div>
+<div class="row py-4">
+    <div class="col-md-4">
+        <div class="text-white" *ngFor="let city of citylist">{{city}}</div>
+    </div>
+    <div class="col-md-4">
+        <select class="form-control">
+            <option *ngFor="let city of citylist">{{city}}</option>
+        </select>
+    </div>
+</div>
+    </div>
+
+    <div class="container">
+         <h1>Getting array list </h1>
+        <table class="table table-bordered table-hover ">
+            <thead>
+                <tr>
+                    <th>srNo</th>
+                    <th>name</th>
+                    <th>city</th>
+                    <th>stream</th>
+                    <th>Position</th>
+                
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let stud of studentList ;index as i;let isFirst=first;let isLast=last">
+                    <td>{{i+1}}</td>
+                    <td>{{stud.name}}</td>
+                    <td>{{stud.city}}</td>
+                    <td>{{stud.stream}}</td> 
+                    <td>
+                        {{isFirst?'First Record':''}}
+                        {{isLast?'Last Record':''}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <h1>Getting array list by method</h1>
+        <table class="table table-bordered table-hover ">
+            <thead>
+                <tr>
+                    <th>srNo</th>
+                    <th>name</th>
+                    <th>city</th>
+                    <th>stream</th>
+                    <th>Position</th>
+                
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let stud of getStudentList() ;index as i;let isFirst=first;let isLast=last">
+                    <td>{{i+1}}</td>
+                    <td>{{stud.name}}</td>
+                    <td>{{stud.city}}</td>
+                    <td>{{stud.stream}}</td> 
+                    <td>
+                        {{isFirst?'First Record':''}}
+                        {{isLast?'Last Record':''}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+   
+

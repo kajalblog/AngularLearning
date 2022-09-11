@@ -1,0 +1,39 @@
+<div class="alert alert-light border " *ngIf="addedProduct">
+  <h6><strong class="text-primary float-start">{{addedProduct}}</strong>&nbsp; is selected and added in cart</h6>
+  <button class="btn btn-primary  float-end mb-5">Checkout</button>
+</div>
+<div class="shadow ">
+    
+    
+    <div class="card " style="width: 18rem;">
+        <img src="../../assets//product03.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Laptop</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a  class="btn btn-primary" (click)="onSelect('Laptop')">Laptop</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="../../assets//product03.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">TV</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a  class="btn btn-primary" (click)="onSelect('TV')">Go somewhere</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="../../assets//product03.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Washing machine</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a  class="btn btn-primary" (click)="onSelect('washing-machine')">Go somewhere</a>
+        </div>
+      </div>
+    
+      
+</div>
+<!-- <input type="text" placeholder="search" [value]="myvalue"> -->
+<!-- <app-child [placeholderText]="myText"></app-child> -->
+<app-child [productselected]="proselected" [selectedProduct]="selectedProduct" (addedProduct)="onAddedProduct($event)"></app-child>
+
+<app-apidata></app-apidata>

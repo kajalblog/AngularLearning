@@ -1,0 +1,15 @@
+<div class="conatiner bg-light py-4 shadow">
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Profile</th>
+        </tr>
+        <tr *ngFor="let user of User">
+            <td>{{user.id}}</td>
+            <td>{{user.title}}</td>
+            <!-- <td><img src="{{user.thumbnailUrl}}" alt=""></td> -->
+            <!-- <td>{{user.thumbnailUrl}}</td> -->
+        </tr>
+    </table>
+</div>

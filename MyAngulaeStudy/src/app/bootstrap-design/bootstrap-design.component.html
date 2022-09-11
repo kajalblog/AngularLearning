@@ -1,0 +1,44 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8" [ngStyle]="{'color':'red'}">Learning Angular is fun</div>
+        <div class="col-md-4" [ngStyle]="{'color':colval}">Learning Angular is fun</div>
+    </div>
+    <div class="row">
+        <div class="col-md-8" [ngStyle]="{'color':'red','background-color':'black'}">Learning Angular is fun</div>
+        <div class="col-md-4" [ngStyle]="{'color':colval,'background-color':bgcolor}">Learning Angular is fun</div>
+    </div>
+
+    <div class="row py-4">
+        <div class="col-md-8" [ngClass]="isActive?'col-md-12':'col-md-8'">
+            <nav class="navbar navbar-light bg-primary">
+                <div class="container-fluid">
+                    <h1>ngclass Implementation</h1>
+                    <div class="d-flex">
+                        <button   type="button" class="btn btn-danger" (click)="isActive=!isActive"  >ShowSideBar</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="col-md-4 bg-success" *ngIf="!isActive">
+            <table class="table table-bordered table-hover mt-0">
+                <thead >
+                     <tr>
+                        <th>srno</th>
+                        <th>name</th>
+                        <th>city</th>
+                        <th>stream</th>
+                     </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>kajal</td>
+                        <td>PPur</td>
+                        <td>IT</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>

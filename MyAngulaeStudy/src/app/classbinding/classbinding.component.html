@@ -1,0 +1,28 @@
+<h1>classbinding works!</h1>
+<h2 class="classcolor classsize">Angular tutorial</h2>
+<h2 [class]="variableName">Angular Tutorial</h2>
+<h2 class="classcolor" [class.classsize]="true">Angular class Binding</h2>
+<h2 class="classcolor" [class.classstyle]="booleanValue">Angular</h2>
+<div [class]="objectvalue">MultiClasses</div>
+<div [class]="booleanValue?'classcolor':'classstyle'">Turnory opperator</div>
+<!-- <h1 class="box" [class.myclass]="booleanValue">This is class binding property</h1> -->
+<h1 class="box" [class.myclass1]="mypro">This is class binding property 2</h1>
+<h1 style="color: green;">Style color</h1>
+<h1 [style.color]="'purple'">Style color</h1>
+<h1 [style.color]="stylecolor">Style color</h1>
+<h1 [style.color]="booleanValue?'red':'green'"> Conditional Style color</h1>
+<button type="button"  (click)="changecolor()">Change Text color</button>
+
+
+<h2  [style.margin]="'10px'">Style binding</h2>
+<h2  [style.margin]=" isActive ?mystyle:''">Style binding</h2>
+<!-- single class binding -->
+<h1 class="box1" [ngClass]="'myclass1 myclass2 myclas3'" >MultiClass</h1>
+<div [ngStyle]="multiStyle">Multiple style binding</div>
+<h1 class="box1" [ngClass]="objectvalue" >MultiClass</h1>
+
+<div [ngStyle]="{
+    'background':'red',
+    'border':'10px solid green'
+}">style binding</div>
+

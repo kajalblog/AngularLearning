@@ -1,0 +1,32 @@
+.parent-box
+{
+    background-color: rgb(231, 253, 232);
+    border: 1px solid rgb(3, 145, 67);
+    width: 30%;
+    padding: 15px;
+}
+/* .row
+{
+    display: flex;
+    justify-content: space-between;
+} */
+.childclass
+{
+    display: flex;
+    /* flex-wrap: nowrap; */
+}
+.parent-box h1{
+    color: rgb(80, 196, 80);
+}
+.parent-box table
+{
+    font-size: 20px;
+    text-align: left;
+}
+.parent-box table th{
+    background-color: rgb(223, 217, 217);
+}
+.removeLink
+{
+    color: red;
+}

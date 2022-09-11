@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left rounded shadow bg-light py-4">
+            <form [formGroup]="myReactiveForm" (ngSubmit)="myForm()">
+                <div class="mb-3">
+                  <label for="username" class="form-label">UserName</label>
+                  <input type="text" class="form-control" id="username"  formControlName="username" required>
+                  <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                  <div class="text-danger" *ngIf="myReactiveForm.controls.username.touched">
+                    <span *ngIf="myReactiveForm.controls.username.errors?.required">username is required</span>
+                    <span *ngIf="myReactiveForm.controls.username.errors?.minlength">Min 5 character required</span>
+                </div>
+                </div>
+                <!-- </div> -->
+                
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" formControlName="email" required>
+                  <!-- <div *ngIf="myReactiveForm.controls.username.touched" class="invalid-feedback"> -->
+                    <div class="text-danger" *ngIf="myReactiveForm.controls.email.touched">
+                        <span *ngIf="myReactiveForm.controls.email.errors?.required">Email is required</span>
+                        <span *ngIf="myReactiveForm.controls.email.errors?.minlength">Min 5 character required</span>
+                    </div>
+                    <!-- <div class="text-danger" *ngIf=" isSubmitted && g.email.errors?.required">email is required</div> -->
+                </div>
+                    <!-- </div> -->
+
+                
+                <button type="submit"  class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+    </div>
+</div>

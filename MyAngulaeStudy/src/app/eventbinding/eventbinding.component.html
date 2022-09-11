@@ -1,0 +1,14 @@
+<p>eventbinding works!</p>
+<div class="text-success">This is event | toUpperCase</div>
+<h1>{{msg}}</h1>
+<input type="text" [ngClass]="isActive?mystyle:''" value="kajal" (click)="changdata()">
+<button type="button" [class]="isActive?Active:''"  (click)="changdata()">Click </button>
+<input type="text" value="angular event" (click)="oninputClick($event)">
+<hr>
+<h1>{{msg}}</h1>
+<button value="Laptop" (click)="Product($event)">Laptop</button>
+<button value="TV" (click)="Product($event)">TV</button>
+
+
+
+
