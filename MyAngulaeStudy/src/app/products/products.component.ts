@@ -18,7 +18,7 @@ export class ProductsComponent implements OnInit {
   
   msgShow()
   {
-    this._magService.messageAlert();
+    // this._magService.messageAlert();
     this.router.navigate(['/products'])
   }
 }

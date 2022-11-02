@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <input type="text" #mydata placeholder="enter value">
     <button class="btn btn-primary" (click)="Adduser(mydata)">Add user</button>
 </div>
@@ -6,4 +6,13 @@
 
 <div *ngFor="let user of mydataval">
     <h4>{{user.name}}{{user.id}}</h4>
-<h4></h4></div>
+<h4></h4></div> -->
+<div class="container bg-light shadow border mb-4" *ngIf="isShow">
+    
+    <input type="text" placeholder="Enter the value" #val>&nbsp;&nbsp;
+    <button type="submit" class="btn btn-primary" (click)="addValue(val)">Add value</button>
+    <app-child2  [myvalue]="myvalue">ng-content value {{myvalue}}</app-child2>
+</div>
+<div class="container text-center  mt-4 py-4">
+<button class="btn btn-danger" (click)="isShow=!isShow">Destroy</button>
+</div>

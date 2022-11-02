@@ -1,0 +1,18 @@
+<div class="container shadow">
+    <div #box>
+        <h1>This is view child partice</h1>
+        <h2>Value is {{addedvalue}}</h2>
+    </div>
+
+</div>
+<div class="container shadow border py-4">
+    <input type="text" placeholder="Enter value" #myval>&nbsp;&nbsp;
+    <button class="btn btn-outline-primary" (click)="addData(myval)">Add</button> &nbsp;
+    <button (click)="getchildval()">ClickValue</button> &nbsp;
+<button (click)="getchildmethod()">clickmeyhod</button>
+</div>
+
+<app-view-client [addedvalue]="addedvalue">
+    <p #childComp>Ng content Paragraph</p>
+</app-view-client>
+

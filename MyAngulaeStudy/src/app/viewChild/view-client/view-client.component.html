@@ -1,0 +1,11 @@
+<div class="container shadow border py-4 " appTestDirective>
+    <div class="container shadow border py-4 " >
+    <div #box>
+        <h1>{{addedvalue}}</h1>
+    </div>
+   <h1>The valu is {{myvalue}}</h1>
+   <button (click)="clickme()">click me</button>
+   <button class="btn btn-secondary" (click)="changeColor('red')">Red</button>
+   <button class="btn btn-secondary" (click)="changeColor('green')">Green</button>
+   <ng-content></ng-content>
+</div>

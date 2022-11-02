@@ -6,11 +6,11 @@
         </div>
     </div>
 </nav>
-<div class="input-group mb-3">
+<!-- <div class="input-group mb-3">
     <span class="input-group-text" id="basic-addon1">Search</span>
     <input type="text" class="form-control" [(ngModel)]="searchInput"
      placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-  </div>
+  </div> -->
 <table class="table table-bordered table-hover mt-3">
     <thead>
         <tr>
@@ -24,7 +24,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let employee of employeeData |filter:searchInput">
+        <tr *ngFor="let employee of employeeData ">
             <td>{{employee.id}}</td>
             <td>{{employee.name |lowercase}}</td>
             <td>{{employee.email}}</td>

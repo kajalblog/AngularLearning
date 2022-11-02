@@ -2,3 +2,13 @@
 
 <input #mydata type="text" value="Angular" name="Testing">
 <button type="button" (click)="changedata(mydata)">Click</button>
+
+<div [ngClass]="SelectColor">
+    Selected Color
+
+</div>
+
+<select [(ngModel)]="SelectColor">
+    <option value="bg-danger">red</option>
+    <option value="bg-primary">Blue</option>
+</select>

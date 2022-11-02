@@ -1,3 +1,17 @@
-input:disabled {
+.disabled {
+  pointer-events: none;
+  opacity: 0.4;
+  }
+  input:disabled {
     cursor: not-allowed;
   }
+
+  input:disabled.disabled {
+    background-color: rgb(40 167 69 / 15%);
+    color: #00aa13;
+  }
+
+  input:disabled.disabled::placeholder {
+    color: #00aa13;
+  }
+

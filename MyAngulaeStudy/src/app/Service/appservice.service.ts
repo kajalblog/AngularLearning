@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 
 @Injectable({
@@ -26,6 +26,8 @@ export class AppserviceService {
     {name:"Kavita",id:"013"},
     {name:"Kajal",id:"014"},
   ]
-
+  headerContact=new BehaviorSubject(false);
+  headerLogin=new BehaviorSubject(true);
+  loginUser=new BehaviorSubject(false);
 
 }

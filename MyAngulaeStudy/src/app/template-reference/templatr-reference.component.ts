@@ -16,4 +16,6 @@ export class TemplatrReferenceComponent implements OnInit {
     console.log(data.name);
     console.log(data.value)
   }
+  SelectColor:any;
+  
 }

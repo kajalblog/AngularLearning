@@ -48,6 +48,13 @@ import { FirstcomComponent } from './ng-container/firstcom/firstcom.component';
 import { SecondcomComponent } from './ng-container/secondcom/secondcom.component';
 import { ChildComponentComponent } from './component-communication/child-component/child-component.component';
 import { ParentComponentComponent } from './component-communication/parent-component/parent-component.component';
+import { Exe2Component } from './Execrise2/exe2/exe2.component';
+import { BlogComponent } from './Execrise2/blog/blog.component';
+import { ViewParentComponent } from './viewChild/view-parent/view-parent.component';
+import { ViewClientComponent } from './viewChild/view-client/view-client.component';
+import { TestDirectiveDirective } from './appDirective/test-directive.directive';
+import { HostDirectiveDirective } from './appDirective/host-directive.directive';
+import { HostlistnerComponent } from './hostlistner/hostlistner.component';
 const appRoutes:Routes=[
   {path:'',redirectTo:'login',pathMatch:'full'},
   {path:'login',component:LoginComponent},
@@ -65,7 +72,7 @@ const appRoutes:Routes=[
     {path:'',component:ProductsComponent},
     {path:'laptop',component:LaptopComponent},
     {path:'tv',component:TvComponent},
-    
+     
   ]},
   {path:'buyproduct',component:BuyProductComponent},
   {path:'exercise1',component:ParentComponent},
@@ -79,6 +86,10 @@ const appRoutes:Routes=[
   {path:'pushdata',component:PushSpliceComponent},
   {path:'ngcontent',component:FirstcomComponent},
   {path:'component-communication',component:ParentComponentComponent},
+  {path:'execrise2',component:Exe2Component},
+  {path:'blog',component:BlogComponent},
+  {path:'viewchild',component:ViewParentComponent},
+  {path:'hostlistner',component:HostlistnerComponent},
   {path:'**',component:PagenotfoundComponent}
   
 ]
@@ -122,7 +133,14 @@ const appRoutes:Routes=[
     FirstcomComponent,
     SecondcomComponent,
     ChildComponentComponent,
-    ParentComponentComponent
+    ParentComponentComponent,
+    Exe2Component,
+    BlogComponent,
+    ViewParentComponent,
+    ViewClientComponent,
+    TestDirectiveDirective,
+    HostDirectiveDirective,
+    HostlistnerComponent
     
   ],
   imports: [

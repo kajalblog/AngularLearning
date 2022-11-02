@@ -11,13 +11,22 @@ export class Parent2Component implements OnInit {
   constructor( private ser:AppserviceService) { }
 
 myvalue:string="";
-  Adduser(mydata:any)
-  {
-    this.myvalue=mydata.value;
-  }
+isShow:boolean=true;
+  // Adduser(mydata:any)
+  // {
+  //   this.myvalue=mydata.value;
+  // }
   mydataval:any[]=[];
   ngOnInit(): void {
     this.mydataval=this.ser.dumpyData;
+  }
+  addValue(myval:any)
+  {
+    this.myvalue=myval.value;
+  }
+  Destroy()
+  {
+    this.isShow=false;
   }
 
 }

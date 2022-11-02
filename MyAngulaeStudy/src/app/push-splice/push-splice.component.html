@@ -13,7 +13,7 @@
                 </div>
                 </div>
                 <!-- </div> -->
-                
+
                 <div class="mb-3">
                   <label for="email" class="form-label">Email</label>
                   <input type="email" class="form-control" id="email" formControlName="email" required>
@@ -31,9 +31,10 @@
                         <div class=" mb-3">
                           <label for="text" class="form-label">State</label>
                           <select  class=" form-control form-select" name="state" formControlName="statelist" (change)="getCities($event.target)">
+                            <option disabled value="" class="list">Select State</option>
                             <option  *ngFor="let state of allState" value="{{state}}">{{state}}</option>
                             <!-- <option value="1">One</option> -->
-                           
+
                           </select>
                           <!-- <label for="floatingSelect">Works with selects</label> -->
                         </div>
@@ -41,20 +42,22 @@
                       <div class="col-md-6">
                         <div class=" mb-3">
                           <label for="text" class="form-label">City</label>
-                          <select class="form-control form-select" name="state" formControlName="citylist" [ngClass]="(myReactiveForm.controls.statelist.value=='')?'disabled':''" >
+
+                          <select class="form-control form-select" name="state" formControlName="citylist"  >
+                            <option disabled value="" class="list">Select City</option>
                             <option *ngFor="let cities of allCities" value="{{cities}}">{{cities}}</option>
                             <!-- <option value="1">One</option> -->
-                           
+
                           </select>
                           <!-- <label for="floatingSelect">Works with selects</label> -->
                         </div>
                       </div>
                     </div>
-                    
-                      
-                <button type="submit"  class="btn btn-primary">Submit</button>
+
+
+                <button type="submit" [disabled]="!myReactiveForm.valid" class="btn btn-primary mb-4">Submit</button>
               </form>
-              <table class="table table-bordered table-hover pt-4">
+              <table class="table table-bordered table-hover py-4">
                 <thead>
                     <tr>
                         <th>Id</th>

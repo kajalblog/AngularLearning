@@ -1,14 +1,6 @@
 {
   "posts": [
     {
-      "id": 2,
-      "name": "Kajal Parchande",
-      "email": "kajal@gmail.com",
-      "mobile": 9586512358,
-      "joiningdate": "2022-09-07",
-      "salary": 55000
-    },
-    {
       "id": 3,
       "name": "Amol Jadhav",
       "email": "Amol@gmail.com",
@@ -23,6 +15,14 @@
       "mobile": 8856247652,
       "joiningdate": "2022-09-07",
       "salary": 75000
+    },
+    {
+      "id": 5,
+      "name": "Kajal Parchande",
+      "email": "kajalparchande@gmail.com",
+      "mobile": 8545125625,
+      "joiningdate": "2022-10-12",
+      "salary": 35000
     }
   ],
   "registerUser": [

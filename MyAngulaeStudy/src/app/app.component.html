@@ -8,7 +8,11 @@
 
 <hr>
 <hr>
-<div class="container">
+<div class="container-fluid"appTestDirective >
+  <div class="d-flex">
+    <button class="btn btn-light" (click)="changebg('black')">Black Theme</button> &nbsp;&nbsp;
+    <button class="btn btn-dark" (click)="changebg('white')">Light Theme</button>
+  </div>
   <ul class="nav nav-tabs">
     <li class="nav-item"><a class="nav-link " routerLinkActive="active" [routerLinkActiveOptions]="
     {exact:true}" routerLink="/home">Home</a></li>
@@ -33,7 +37,29 @@
     <li class="nav-item"><a class="nav-link " routerLinkActive="active" routerLink="/rForm">RForm</a></li>
     <li class="nav-item"><a class="nav-link " routerLinkActive="active" routerLink="/crud">CRUD</a></li>
     <li class="nav-item"><a class="nav-link " routerLinkActive="active" routerLink="/loginapp">Login App</a></li>
-    
+    <li class="nav-item"><a class="nav-link " routerLinkActive="active" routerLink="/execrise2">Execrise2</a></li>
+    <li class="nav-item"><a class="nav-link " routerLinkActive="active" routerLink="/viewchild">View-Child</a></li>
+    <li class="nav-item"><a class="nav-link " routerLinkActive="active" routerLink="/hostlistner">Host-Listner</a></li>
+    <ng-container *ngIf="headerLogin">
+      <button *ngIf="!loginUser" class="btn btn-outline-primary">Sign Up</button>
+      <ul *ngIf="loginUser">
+        <li>Welcome <strong class="text-primary">Kajal</strong></li>
+        <li><a href="#"><i class="fas fa-unlock">LogOut</i></a></li>
+      </ul>
+    </ng-container>
+    <div class="contactDetails" *ngIf="headerContact">
+      <ul>
+        <li>
+          <a>www.myblog.com</a>
+         
+        </li>
+        <li>
+          
+          <a>954785623658</a>
+        </li>
+      </ul>
+     
+    </div>
 
     
   </ul>
